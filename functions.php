@@ -1,22 +1,33 @@
 <?php
-function my_theme_enqueue_styles() {
+/**
+ * Functions and definitions
+ *
+ * @package Smartscape
+ */
 
-    $parent_style = 'twentyseventeen-style';
+use MWT\App\Core\Init;
+use MWT\App\Scripts;
+use MWT\App\Fields\ACF;
 
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
-    );
-}
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+/**
+ * Define Theme Version
+ * Define Theme directories
+ */
+// define( 'THEME_VERSION', '1.0.0' );
+define( 'MWT_THEME_DIR', trailingslashit( get_theme_file_path() ) );
+define( 'MWT_THEME_PATH_URL', trailingslashit( get_theme_file_uri() ) );
 
-function add_square_payment_form() {
-    echo '<!-- link to the SqPaymentForm library --><script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script><!-- link to the local SqPaymentForm initialization --><script type="text/javascript" src="' . get_template_directory_uri() . '/sqpaymentform/sqpaymentform.css' . '"></script><!-- link to the custom styles for SqPaymentForm --><link rel="stylesheet" type="text/css" href="path/to/sqpaymentform.css">';
-}
+// Require Autoloader
+require_once MWT_THEME_DIR . 'vendor/autoload.php';
 
-// check here to make sure we are on correct page before it loads
+/**
+ * Theme Setup
+ */
+// add_action( 'after_setup_theme', function () {
 
-add_action( 'wp_head', 'add_square_payment_form' );
+    ( new Init() )
+        ->add( new Scripts() )
+        // ->add( new ACF() )
+        ->initialize();
+// } );
 ?>

@@ -1,0 +1,12 @@
+{
+  "name": "mpls-water-taxi",
+  "description": "A WordPress child theme.",
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "MWT\\": ""
+    }
+  }
+}
