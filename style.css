@@ -1,0 +1,96 @@
+/*
+ Theme Name:   Twenty Seventeen Child
+ Theme URI:    http://example.com/twenty-seventeen-child/
+ Description:  Twenty Seventeen Child Theme
+ Author:       Lindsey Olson
+ Author URI:   http://lindseyolson.io
+ Template:     twentyseventeen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         
+ Text Domain:  twenty-seventeen-child
+*/
+
+.custom-header .site-branding {
+  top: 0;
+  bottom: unset;
+}
+
+.custom-logo-link img {
+  max-height: 200px;
+  margin-left: -2.5rem;
+}
+
+.twentyseventeen-front-page.has-header-image .site-branding {
+  margin-bottom: 0;
+}
+
+.site-content-contain .site-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.prices-reservations__content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.prices-reservations__content h2 {
+  padding-top: 0;
+}
+
+.home__content {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.site-footer .widget-area a:focus {
+  box-shadow: none;
+  color: white;
+}
+
+.site-footer .widget-area a:active {
+  box-shadow: none;
+  color: white;
+}
+
+.site-footer .widget-area a:hover {
+  box-shadow: none;
+  color: white;
+}
+
+.widget_text ul {
+  margin-left: 0;
+}
+
+.site-footer .widget-column.footer-widget-1 {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 770px) {
+  .site-footer .widget-column.footer-widget-1 {
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.site-footer .widget-column.footer-widget-1 .social-navigation {
+  width: 100%;
+}
+
+.site-footer .widget-column.footer-widget-2 {
+  width: 100%;
+}
+
+@media screen and (min-width: 770px) {
+  .site-footer .widget-column.footer-widget-2 {
+    width: 65%;
+  }
+}
+
+.site-footer .widget-column.footer-widget-2 img {
+  width: 100%;
+}
